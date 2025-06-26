@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import pandas as pd
 import xgboost as xgb
 from sklearn.model_selection import train_test_split
@@ -10,6 +11,7 @@ import numpy as np
 try:
     dataset_path = 'qled_dataset.csv'
     df = pd.read_csv(dataset_path)
+    df.columns = df.columns.str.strip()  # 컬럼명 앞뒤 공백 제거
     print(f"✅ 데이터셋 '{dataset_path}' 로딩 성공!")
     print(f"데이터셋 크기: {df.shape[0]}개의 샘플, {df.shape[1]}개의 변수")
 except FileNotFoundError:
@@ -18,7 +20,7 @@ except FileNotFoundError:
 
 # --- 2. 데이터 준비 (입력과 목표 분리) ---
 # 입력 변수(X): 두께 정보
-feature_names = ['ZnO_thickness', 'QD_thickness', 'CBP_thickness']  # 실제 컬럼명으로 수정
+feature_names = ['ZnO_thickness', 'QD_thickness', 'CBP_thickness']  # 실제 컬럼명에 맞게 수정
 X = df[feature_names]
 
 # 목표 변수(y): EQE 정보
