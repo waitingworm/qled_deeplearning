@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+pomodoro_log_*.txt
+
+# Model files
+*.joblib
+*.pkl
+*.pickle
+
+# Data files
+*.csv
+*.xlsx
+*.xls
+
+# Output files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.html
+
+# Temporary files
+*.tmp
+*.temp 
